@@ -139,6 +139,19 @@ Enables guests to leave feedback on properties they’ve stayed in. Reviews incl
 # 🔎 Search and Filtering
 Provides powerful tools for users to search for properties based on location, price, date, and other filters. This improves user experience and helps guests find the perfect stay quickly.
 
+# 🔐 API Security
+Security is a critical part of this project to protect user data and ensure safe communication between the client and server. Below are the key practices and tools used to secure the API:
+
+Authentication & Authorization: Implemented using JWT (JSON Web Tokens) to control access to protected routes and resources.
+
+HTTPS: Ensures all data exchanged between the client and server is encrypted.
+
+Input Validation & Sanitization: All user inputs are validated and sanitized to prevent injection attacks.
+
+Rate Limiting: Prevents abuse by limiting the number of requests a user can make in a certain time frame.
+
+Error Handling: Generic error messages are used to avoid exposing sensitive implementation details.
+
 # 🛠️ Admin Dashboard (Optional/Advanced)
 A backend dashboard for site administrators to monitor users, properties, and transactions. This ensures the system is operating smoothly and helps with moderation and support.
 A User can leave multiple Reviews, each for different Properties (one-to-many).
