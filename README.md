@@ -4,6 +4,7 @@ Understanding the responsibilities of each team member ensures clear communicati
 Responsibility:
 Designs and implements the server-side logic, APIs, and core business logic. Ensures secure, scalable, and efficient backend functionality that powers the application.
 
+
 # 🧰 Technology Stack
 Below is an overview of the key technologies used in this project, along with their roles:
 
@@ -30,3 +31,92 @@ Purpose: Version control tools used to manage and track code changes, collaborat
 
 # 📦 Django REST Framework (DRF)
 Purpose: A powerful toolkit built on top of Django for building Web APIs. Used in this project to simplify the creation of robust and customizable RESTful APIs.
+
+
+# 🗄️ Database Design
+This section outlines the key entities in the database and how they are related to one another.
+
+# 👤 Users
+Represents the individuals using the platform (both hosts and guests).
+Key Fields:
+
+id (Primary Key)
+
+name
+
+email
+
+password_hash
+
+role (e.g., host, guest)
+
+# 🏠 Properties
+Represents listings created by hosts.
+Key Fields:
+
+id (Primary Key)
+
+title
+
+description
+
+location
+
+price_per_night
+
+owner_id (Foreign Key → Users)
+
+# 📅 Bookings
+Represents reservations made by guests for specific properties.
+Key Fields:
+
+id (Primary Key)
+
+property_id (Foreign Key → Properties)
+
+user_id (Foreign Key → Users)
+
+start_date
+
+end_date
+
+# 📝 Reviews
+Represents feedback from guests about a property.
+Key Fields:
+
+id (Primary Key)
+
+user_id (Foreign Key → Users)
+
+property_id (Foreign Key → Properties)
+
+rating (1 to 5)
+
+comment
+
+# 💳 Payments
+Tracks payment transactions related to bookings.
+Key Fields:
+
+id (Primary Key)
+
+booking_id (Foreign Key → Bookings)
+
+amount
+
+payment_date
+
+status (e.g., completed, pending, failed)
+
+# 🔗 Entity Relationships
+A User can own multiple Properties (one-to-many).
+
+A User can make multiple Bookings (one-to-many).
+
+A Property can have multiple Bookings (one-to-many).
+
+A Booking is linked to one Payment (one-to-one).
+
+A User can leave multiple Reviews, each for different Properties (one-to-many).
+
+A Property can receive multiple Reviews (one-to-many).
