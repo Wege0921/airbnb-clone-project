@@ -1,6 +1,3 @@
-# airbnb-clone-project
-
-
 # Team Roles
 Understanding the responsibilities of each team member ensures clear communication and effective collaboration. Below are the key roles within our project team
 # Backend Developer
