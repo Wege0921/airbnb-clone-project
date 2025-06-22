@@ -157,3 +157,24 @@ A backend dashboard for site administrators to monitor users, properties, and tr
 A User can leave multiple Reviews, each for different Properties (one-to-many).
 
 A Property can receive multiple Reviews (one-to-many).
+
+# 🔄 CI/CD Pipeline
+CI/CD (Continuous Integration and Continuous Deployment) pipelines are automated workflows that help streamline the software development process. They allow teams to automatically build, test, and deploy code every time a change is made, ensuring that software is always in a deployable state.
+
+For this project, the CI/CD pipeline plays a critical role by:
+
+Automatically running tests to catch bugs early in the development cycle.
+
+Building Docker containers to ensure consistent environments across development and production.
+
+Deploying updates seamlessly and efficiently to production or staging environments.
+
+Tools that can be used:
+
+GitHub Actions – for automating workflows like testing, building, and deploying code.
+
+Docker – for containerizing the application and managing deployment environments.
+
+Heroku / AWS / Render – for hosting and deployment of the web application.
+
+PostgreSQL – integrated with pipelines to maintain a consistent test database environment.
